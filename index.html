@@ -120,7 +120,94 @@
                                 <h1 class="entry-title" itemprop="headline">Сравнительная таблица рейтинга видеокарт NVIDIA GeForce: производительность и цены</h1>
                     
         
-        
+            <title>Поиск городов России</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #search {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #city-list {
+            display: flex;
+            flex-wrap: wrap; /* Позволяет рядам перемещаться */
+            justify-content: center; /* Центрирует элементы */
+            padding: 0;
+        }
+        .city-item {
+            width: 200px; /* Ширина каждой карточки города */
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc; /* Граница для визуального отделения */
+            border-radius: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Список городов России</h1>
+    <input type="text" id="search" onkeydown="checkEnter(event)" placeholder="Введите название города...">
+    <div id="city-list">
+        <span class="city-item">Москва</span>
+        <span class="city-item">Санкт-Петербург</span>
+        <span class="city-item">Новосибирск</span>
+        <span class="city-item">Екатеринбург</span>
+        <span class="city-item">Нижний Новгород</span>
+        <span class="city-item">Казань</span>
+        <span class="city-item">Челябинск</span>
+        <span class="city-item">Омск</span>
+        <span class="city-item">Ростов-на-Дону</span>
+        <span class="city-item">Уфа</span>
+        <span class="city-item">Самара</span>
+        <span class="city-item">Красноярск</span>
+        <span class="city-item">Воронеж</span>
+        <span class="city-item">Пермь</span>
+        <span class="city-item">Волгоград</span>
+        <span class="city-item">Краснодар</span>
+    </div>
+
+    <script>
+        function checkEnter(event) {
+            // Проверяем нажатие клавиши Enter
+            if (event.key === "Enter") {
+                filterCities();
+            }
+        }
+
+        function filterCities() {
+            const input = document.getElementById('search');
+            const filter = input.value.toLowerCase();
+            const cityList = document.getElementById('city-list');
+            const cities = cityList.getElementsByClassName('city-item');
+
+            let found = false;
+
+            for (let i = 0; i < cities.length; i++) {
+                const city = cities[i].textContent || cities[i].innerText;
+
+                // Проверка, совпадает ли название города с введенным текстом
+                if (city.toLowerCase() === filter && filter !== "") {
+                    cities[i].style.display = ''; // Показываем совпадающий город
+                    found = true; // Устанавливаем флаг, что город найден
+                } else {
+                    cities[i].style.display = 'none'; // Скрываем остальные города
+                }
+            }
+
+            // Если не найдено совпадений, скрываем все
+            if (!found) {
+                for (let i = 0; i < cities.length; i++) {
+                    cities[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
     
 	<div class="entry-content" itemprop="articleBody">
 		<p><span style="font-weight: 400;">В мире современных видеоускорителей видеокарты GeForce от производителя NVIDIA являются эталоном для геймеров и профессионалов. В этом рейтинге предлагаем вам оценку GPU различных серий, покажем популярные топ модели, их характеристики и место в каталоге, чтобы вы могли выбрать лучшее из списка и получить максимум от своего ПК или ноутбука. Актуальный рейтинг популярности основан на общем количестве результатов бенчмарков, представленных по всем тестам за последние 30 дней.</span></p>
