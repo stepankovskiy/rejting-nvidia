@@ -88,11 +88,9 @@ table-container {
 		
 	/* стили для облака тегов*/
 .tag-cloud {
-    width: 90%;
-    max-width: 800px;
+    width: 100%; /* Занимает всю ширину экрана */
     padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap;
@@ -115,6 +113,15 @@ table-container {
 .tag:hover {
     background-color: #007bff;
     color: #fff;
+}
+
+/* Адаптивные стили для маленьких экранов */
+@media (max-width: 600px) {
+    .tag {
+        font-size: 0.8em; /* Уменьшаем размер шрифта */
+        padding: 6px 12px; /* Уменьшаем отступы */
+        margin: 3px; /* Уменьшаем отступы */
+    }
 }
 		
 	
@@ -892,36 +899,7 @@ table-container {
 </p>
 
 		
-<br>
-<strong>Выберите категорию:</strong>
-<p>
 
-<div class="tag-cloud">
-        <a href="#" class="tag">Интегрированные</a>
-        <a href="#" class="tag">Дискретные</a>
-        <a href="#" class="tag">Офисные</a>
-        <a href="#" class="tag">Бюджетные</a>
-        <a href="#" class="tag">Игровые</a>
-        <a href="#" class="tag">Профессиональные</a>
-        <a href="#" class="tag">Вычислительные</a>
-        <a href="#" class="tag">Полноразмерные</a>
-        <a href="#" class="tag">Низкопрофильные</a>
-        <a href="#" class="tag">Короткие</a>
-        <a href="#" class="tag">Односекционные</a>
-        <a href="#" class="tag">Аксиальные</a>
-        <a href="#" class="tag">Турбинные</a>
-        <a href="#" class="tag">Гибридные</a>
-        <a href="#" class="tag">Жидкостные</a>
-        <a href="#" class="tag">Пассивные</a>
-        <a href="#" class="tag">Средний класс</a>
-        <a href="#" class="tag">Верхний сегмент</a>
-        <a href="#" class="tag">Трассировка лучей</a>
-    </div>
-
-</p>
-
-
-		
 <h2>Таблица энергопотребления и тепловыделения</h2>
 <p>
 <div class="table-container">
@@ -1048,31 +1026,36 @@ table-container {
 </div>	
 </p>
 <br>
-<strong>Выберите уровень сегмента:</strong>
-<table style="border-collapse: collapse; width: 100%; height: 42px;">
-<tbody>
-<tr style="height: 21px;">
-<td style="width: 33.3333%; height: 21px;"><div class="btn-box"><a href="" class="btn btn-size-small" style="background-color:#f2f2f2;color:#000000;" target=""><span style="font-weight: 400;">Флагманские</span></a></div></td>
-<td style="width: 33.3333%; height: 21px;"><div class="btn-box"><a href="" class="btn btn-size-small" style="background-color:#f2f2f2;color:#000000;" target=""><span style="font-weight: 400;">Бюджетные</span></a></div></td>
-<td style="width: 33.3333%; height: 21px;"><div class="btn-box"><a href="" class="btn btn-size-small" style="background-color:#f2f2f2;color:#000000;" target=""><span style="font-weight: 400;">Доступные</span></a></div></td>
-</tr>
-<tr style="height: 21px;">
-<td style="width: 33.3333%; height: 21px;"><div class="btn-box"><a href="" class="btn btn-size-small" style="background-color:#f2f2f2;color:#000000;" target=""><span style="font-weight: 400;">Дорогие</span></a></div></td>
-<td style="width: 33.3333%; height: 21px;"><div class="btn-box"><a href="" class="btn btn-size-small" style="background-color:#f2f2f2;color:#000000;" target=""><span style="font-weight: 400;">Недорогие</span></a></div></td>
-<td style="width: 33.3333%; height: 21px;"><div class="btn-box"><a href="" class="btn btn-size-small" style="background-color:#f2f2f2;color:#000000;" target=""><span style="font-weight: 400;">Выгодные</span></a></div></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Выберите поколение:</strong></p>
-<table style="border-collapse: collapse; width: 100%;">
-<tbody>
-<tr>
-<td style="width: 33.3333%;"><div class="btn-box"><a href="" class="btn btn-size-small" style="background-color:#f2f2f2;color:#000000;" target=""><span style="font-weight: 400;">Современные</span></a></div></td>
-<td style="width: 33.3333%;"><div class="btn-box"><a href="" class="btn btn-size-small" style="background-color:#f2f2f2;color:#000000;" target=""><span style="font-weight: 400;">Новые</span></a></div></td>
-<td style="width: 33.3333%;"><div class="btn-box"><a href="" class="btn btn-size-small" style="background-color:#f2f2f2;color:#000000;" target=""><span style="font-weight: 400;">Архитектура</span></a></div></td>
-</tr>
-</tbody>
-</table>
+<br>
+<strong>Выберите категорию:</strong>
+<p>
+
+<div class="tag-cloud">
+        <a href="#" class="tag">Интегрированные</a>
+        <a href="#" class="tag">Дискретные</a>
+        <a href="#" class="tag">Офисные</a>
+        <a href="#" class="tag">Бюджетные</a>
+        <a href="#" class="tag">Игровые</a>
+        <a href="#" class="tag">Профессиональные</a>
+        <a href="#" class="tag">Вычислительные</a>
+        <a href="#" class="tag">Полноразмерные</a>
+        <a href="#" class="tag">Низкопрофильные</a>
+        <a href="#" class="tag">Короткие</a>
+        <a href="#" class="tag">Односекционные</a>
+        <a href="#" class="tag">Аксиальные</a>
+        <a href="#" class="tag">Турбинные</a>
+        <a href="#" class="tag">Гибридные</a>
+        <a href="#" class="tag">Жидкостные</a>
+        <a href="#" class="tag">Пассивные</a>
+        <a href="#" class="tag">Средний класс</a>
+        <a href="#" class="tag">Верхний сегмент</a>
+        <a href="#" class="tag">Трассировка лучей</a>
+    </div>
+
+</p>
+
+
+		
 <h2>Модели, поддерживающие технологию NVLink</h2>
 <div class="table-container">
 
@@ -1213,6 +1196,7 @@ DT_TP['4'] = new DataTable('#tablepress-4',{language:DT_language['ru_RU'],order:
 
 </body>
 </html>
+
 
 
 
